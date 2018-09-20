@@ -22,14 +22,14 @@ public class DemonController {
 		System.out.println(this.message);
 		return "Spring boot test";
 	}
-    
+    @ResponseBody 
 	@SuppressWarnings("null")
 	@GetMapping(value="/demo/{name}")
-    public @ResponseBody Map<String, Object> welcome(@PathVariable String name,Map<String, Object> model) {
+    public String welcome(@PathVariable String name,Map<String, Object> model) {
 		model.put("time", new Date());
         model.put("message", this.message);
         model.put("name", name);
-        return model;
+        return JSON.toJSONString(model);
     }
 	
 }
