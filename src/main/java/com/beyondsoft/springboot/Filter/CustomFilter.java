@@ -25,7 +25,7 @@ public class CustomFilter implements Filter{
 	
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException{
-		logger.info("Filter init");
+		logger.info("Filter initialization");
 	}
 	
 	@Override
