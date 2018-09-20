@@ -10,25 +10,33 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 
 
 
 @WebFilter(filterName="customFilter",urlPatterns= {"/*"})
-@Slf4j
+
 public class CustomFilter implements Filter{
+	
+	private final static Logger logger = LoggerFactory.getLogger(CustomFilter.class);
 	
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException{
+		logger.info("Filter init");
 	}
 	
 	@Override
 	public void doFilter(ServletRequest request,ServletResponse response,FilterChain chain)
 	throws IOException,ServletException{
+		logger.info("Filter processing");
 		chain.doFilter(request, response);
 	}
 	@Override
 	public void destroy() {
+		logger.info("Filter destory");
 		
 	}
 
