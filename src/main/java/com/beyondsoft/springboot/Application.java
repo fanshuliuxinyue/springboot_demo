@@ -8,7 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ServletComponentScan
-@ComponentScan(basePackages={"com.beyondsoft.springboot.Interceptor"})
+@ComponentScan(basePackages={"com.beyondsoft.springboot.Interceptor",
+		"com.beyondsoft.springboot"})
 public class Application {
 
 	public static void main(String[] args) {
