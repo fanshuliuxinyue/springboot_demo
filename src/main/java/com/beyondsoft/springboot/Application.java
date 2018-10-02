@@ -9,7 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ServletComponentScan
 @ComponentScan(basePackages={"com.beyondsoft.springboot.Interceptor",
-		"com.beyondsoft.springboot"})
+		"com.beyondsoft.springboot",
+		"com.beyondsoft.springboot.swaggerconfig"})
 public class Application {
 
 	public static void main(String[] args) {
