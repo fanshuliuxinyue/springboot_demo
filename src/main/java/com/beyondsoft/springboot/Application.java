@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ServletComponentScan
 @ComponentScan(basePackages={"com.beyondsoft.springboot.Interceptor",
 		"com.beyondsoft.springboot",
+		"com.beyondsoft.springboot.Dao",
 		"com.beyondsoft.springboot.swaggerconfig"})
 public class Application {
 

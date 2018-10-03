@@ -2,6 +2,7 @@ package com.beyondsoft.springboot.Controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -31,7 +32,8 @@ public class DemonController {
     @ApiOperation(value="测试Get方法URL参数传递")
 	@SuppressWarnings("null")
 	@GetMapping(value="/demo/{name}",produces = "application/json")
-    public String welcome(@PathVariable String name,Map<String, Object> model) {
+    public String welcome(@PathVariable String name) {
+    	Map<String, Object> model = new HashMap<String,Object>();
         Date currentTime = new Date();  
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
         String dateString = formatter.format(currentTime); 
