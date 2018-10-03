@@ -21,4 +21,10 @@ public class DeptServiceImpl implements IDeptService {
 		return this.deptDAO.findAll();
 	}
 
+	@Override
+	public boolean add(Dept dt) {
+		// TODO Auto-generated method stub
+		return this.deptDAO.doCreate(dt);
+	}
+
 }

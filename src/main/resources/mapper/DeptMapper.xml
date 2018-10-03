@@ -5,4 +5,7 @@
     <select id="findAll" resultType="com.beyondsoft.springboot.Model.Dept">
         SELECT deptno,dname FROM dept ;
     </select>
+    <insert id="doCreate" parameterType="com.beyondsoft.springboot.Model.Dept">
+        INSERT INTO dept(dname) VALUES (#{dname}) ;
+    </insert>
 </mapper>

@@ -9,5 +9,6 @@ import com.beyondsoft.springboot.Model.Dept;
 @Mapper
 public interface IDeptDAO {
 	public List<Dept> findAll() ;
+	public boolean doCreate(Dept dt) ;
 
 }

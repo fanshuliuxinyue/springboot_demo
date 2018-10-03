@@ -26,5 +26,11 @@ public class ApplicationTests {
 			System.out.println(dt.toString());
 		}
     }
+    @Test
+    public void testAdd() throws Exception {
+        Dept dept = new Dept();
+        dept.setDname("刘新悦");
+        System.out.println(this.deptService.add(dept));
+    }
 
 }
