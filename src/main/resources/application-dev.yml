@@ -9,7 +9,7 @@ logging:
 message: welcome
 swagger:
   enabled: true  
-debug: false
+debug: true
 mybatis:
   mapper-locations: classpath:mapper/*.xml                                 
 
