@@ -21,4 +21,10 @@ public class MysqlServiceImpl implements IMysqlService {
 		return this.imysql.showDatabases();
 	}
 
+	@Override
+	public List<String> tablesList() {
+		// TODO Auto-generated method stub
+		return this.imysql.showTables();
+	}
+
 }

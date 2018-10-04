@@ -17,8 +17,12 @@ public class MysqlController {
     @Resource
     private IMysqlService imysql;
     @GetMapping(value = "/databases", produces = "application/json")
-    public List<String> list() { // 通过model可以实现内容的传递
+    public List<String> database_list() { // 通过model可以实现内容的传递
         return this.imysql.databasesList(); 
+    }
+    @GetMapping(value = "/tables", produces = "application/json")
+    public List<String> table_list() { // 通过model可以实现内容的传递
+        return this.imysql.tablesList(); 
     }
 
 }

@@ -5,4 +5,7 @@
 	<select id="showDatabases" resultType="String">
       show databases;
 	</select>
+	<select id="showTables" resultType="String">
+      show tables;
+	</select>
 </mapper>
