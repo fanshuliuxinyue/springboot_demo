@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages={"com.beyondsoft.springboot.Interceptor",
 		"com.beyondsoft.springboot",
 		"com.beyondsoft.springboot.Dao",
+		"com.beyondsoft.springboot.Config",
 		"com.beyondsoft.springboot.swaggerconfig"})
 public class Application {
 	public static void main(String[] args) {
