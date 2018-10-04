@@ -3,7 +3,10 @@ package com.beyondsoft.springboot.Controller;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +15,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.fastjson.JSON;
+import com.beyondsoft.springboot.Model.Dept;
+import com.beyondsoft.springboot.Service.IDeptService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -42,5 +47,11 @@ public class DemonController {
         model.put("name", name);
         return JSON.toJSONString(model);
     }
-	
+    
+    @Resource
+    private IDeptService deptService ;
+    @GetMapping(value = "/list", produces = "application/json")
+    public List<Dept> list() { // 通过model可以实现内容的传递
+        return this.deptService.list() ; 
+    }
 }
